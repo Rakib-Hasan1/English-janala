@@ -32,7 +32,7 @@
   </head>
   <body class="poppins">
     <!-- navbar section -->
-    <nav class="py-5 bg-[#C6BDBD30] border-b-2 border-gray-300">
+    <nav class="py-5 bg-gray-100 border-b-2 border-gray-300 sticky top-0 z-50">
       <div class="flex flex-col md:flex-row justify-between w-11/12 mx-auto">
         <div class="flex items-center">
           <p class="font-semibold text-xl">English</p>
@@ -40,12 +40,12 @@
           <p class="font-semibold text-xl">জানালা</p>
         </div>
         <div class="flex gap-4">
-          <button
+          <button onclick="scrollToFAQ()"
             class="btn text-[#422AD5] border-[#422AD5] hover:bg-[#422AD5] hover:text-white"
           >
             <i class="fa-solid fa-circle-question"></i> FAQ
           </button>
-          <button
+          <button onclick="scrollToLearn()"
             class="btn text-[#422AD5] border-[#422AD5] hover:bg-[#422AD5] hover:text-white"
           >
             <i class="fa-solid fa-book-open"></i> Learn
@@ -79,15 +79,15 @@
             <input
               class="my-2 pr-10 border-gray-300 rounded-sm"
               placeholder="  Enter Your Name"
-              type="text"
+              type="text" required
               name=""
               id=""
             />
             <br />
-            <input
+            <input id="input-password"
               class="my-2 pr-10 border-gray-300 rounded-sm"
-              placeholder="  .........."
-              type="password"
+              placeholder="  ........"
+              type="password" required
               name=""
               id=""
             />
@@ -106,23 +106,18 @@
     </section>
 
     <!-- Learn section -->
-    <section class="w-11/12 mx-auto my-20">
-      <h2 class="font-bold text-4xl text-center">
+    <section id="learn-section" class="w-11/12 mx-auto">
+      <h2 class="font-bold text-4xl text-center my-10">
         <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
       </h2>
 
-      <button
-        class="btn text-[#422AD5] border-[#422AD5] hover:bg-[#422AD5] hover:text-white"
-      >
-        <i class="fa-solid fa-book-open"></i>
-        Lesson -1
-      </button>
-
+     <div id="category-buttons" class="flex justify-center gap-6">
+     </div>
       <div class="bg-gray-100 rounded-lg"></div>
     </section>
 
     <!-- frequently ask section -->
-    <section class="w-11/12 mx-auto my-20">
+    <section id="faq-section" class="w-11/12 mx-auto my-20">
       <h2 class="font-bold text-4xl text-center my-10">
         <span class="text-[#00BCFF]">Frequently</span> Asked Questions
       </h2>
@@ -130,57 +125,51 @@
         <div class="collapse collapse-plus bg-base-200">
           <input type="radio" name="my-accordion-3" checked="checked" />
           <div class="collapse-title font-semibold">
-            1. How can I start learning English on this website?
+            1.  the difference between var, let, and const
           </div>
           <div class="collapse-content text-sm">
-            You can start by exploring our beginner lessons, interactive
-            exercises, and quizzes. We also offer structured courses to guide
-            you step by step.
+            var, let, and const are used to declare variables in JavaScript.
+             var is old and less safe, let can change, and const cannot change once set. I use let and const more.
           </div>
         </div>
         <div class="collapse collapse-plus bg-base-200">
           <input type="radio" name="my-accordion-3" />
           <div class="collapse-title font-semibold">
-            2. Is this website free to use?
+            2. the difference between map(), forEach(), and filter()
           </div>
           <div class="collapse-content text-sm">
-            Yes, this website is free to use! You can ask questions, learn new
-            things, and get coding help without any cost. Feel free to explore
-            and learn!
+            map(), forEach(), and filter() are used for arrays in JavaScript.
+             map() creates a new array, forEach() loops without returning, and filter() creates a new array with matching items.
           </div>
         </div>
         <div class="collapse collapse-plus bg-base-200">
           <input type="radio" name="my-accordion-3" />
           <div class="collapse-title font-semibold">
-            3. Do I need to create an account?
+            3. Explain arrow functions and how they are different from regular functions
           </div>
           <div class="collapse-content text-sm">
-            No, you don’t need to create an account to use this website.
-            However, having an account may provide additional benefits like
-            saving progress or preferences.
+            Arrow functions are a shorter way to write functions in JavaScript. They don’t have their own this, making them different from regular functions.
+             Use them for simple and cleaner code.
           </div>
         </div>
         <div class="collapse collapse-plus bg-base-200">
           <input type="radio" name="my-accordion-3" />
           <div class="collapse-title font-semibold">
-            4. How can I build my English vocabulary?
+            4. How JavaScript Promises work
           </div>
           <div class="collapse-content text-sm">
-            Improving vocabulary requires daily practice. Read books, watch
-            English content, use a dictionary, practice speaking, write
-            regularly, play word games, and stay consistent for the best
-            results.
+            JavaScript Promises handle async tasks. A Promise has three states: pending, resolved, or rejected.
+             It runs a task and, when done, either resolves (success) or rejects (error). Use .then() and .catch().
           </div>
         </div>
         <div class="collapse collapse-plus bg-base-200">
           <input type="radio" name="my-accordion-3" />
           <div class="collapse-title font-semibold">
-            5. Do you offer certificates for completed courses?
+            5. How closures work in JavaScript
           </div>
           <div class="collapse-content text-sm">
-            Many platforms offer certificates for completed courses, while
-            others focus on providing knowledge. Always check the course details
-            to see if certification is available for learners.
+            Closures in JavaScript happen when a function remembers variables from its parent scope, even after the parent function has finished running.
+             This helps keep data private and makes functions more powerful.
           </div>
         </div>
       </main>
