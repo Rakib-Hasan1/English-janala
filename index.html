@@ -28,6 +28,9 @@
         font-family: "Poppins", sans-serif;
         font-style: normal;
       }
+      .active {
+        background-color: #422ad5;
+      }
     </style>
   </head>
   <body class="poppins">
@@ -40,12 +43,14 @@
           <p class="font-semibold text-xl">জানালা</p>
         </div>
         <div class="flex gap-4">
-          <button onclick="scrollToFAQ()"
+          <button
+            onclick="scrollToFAQ()"
             class="btn text-[#422AD5] border-[#422AD5] hover:bg-[#422AD5] hover:text-white"
           >
             <i class="fa-solid fa-circle-question"></i> FAQ
           </button>
-          <button onclick="scrollToLearn()"
+          <button
+            onclick="scrollToLearn()"
             class="btn text-[#422AD5] border-[#422AD5] hover:bg-[#422AD5] hover:text-white"
           >
             <i class="fa-solid fa-book-open"></i> Learn
@@ -79,15 +84,18 @@
             <input
               class="my-2 pr-10 border-gray-300 rounded-sm"
               placeholder="  Enter Your Name"
-              type="text" required
+              type="text"
+              required
               name=""
               id=""
             />
             <br />
-            <input id="input-password"
+            <input
+              id="input-password"
               class="my-2 pr-10 border-gray-300 rounded-sm"
               placeholder="  ........"
-              type="password" required
+              type="password"
+              required
               name=""
               id=""
             />
@@ -111,13 +119,22 @@
         <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
       </h2>
 
-     <div id="category-buttons" class="flex justify-center gap-6">
-     </div>
-      <div class="bg-gray-100 rounded-lg"></div>
+      <div id="category-buttons" class="flex justify-center gap-6"></div>
+      <div
+        id="detailsContainer"
+        class="bg-gray-50 rounded-lg my-5 text-center min-h-[220px] p-5"
+      >
+        <main>
+          <section id="details-container">
+            <p class="text-xs pt-20">আপনি এখনো কোন Lesson Select করেন নি</p>
+            <p class="font-medium text-4xl py-5">একটি Lesson Select করুন।</p>
+          </section>
+        </main>
+      </div>
     </section>
 
     <!-- frequently ask section -->
-    <section id="faq-section" class="w-11/12 mx-auto my-20">
+    <section id="faq-section" class="w-11/12 mx-auto my-20 p-4">
       <h2 class="font-bold text-4xl text-center my-10">
         <span class="text-[#00BCFF]">Frequently</span> Asked Questions
       </h2>
@@ -125,11 +142,12 @@
         <div class="collapse collapse-plus bg-base-200">
           <input type="radio" name="my-accordion-3" checked="checked" />
           <div class="collapse-title font-semibold">
-            1.  the difference between var, let, and const
+            1. the difference between var, let, and const
           </div>
           <div class="collapse-content text-sm">
-            var, let, and const are used to declare variables in JavaScript.
-             var is old and less safe, let can change, and const cannot change once set. I use let and const more.
+            var, let, and const are used to declare variables in JavaScript. var
+            is old and less safe, let can change, and const cannot change once
+            set. I use let and const more.
           </div>
         </div>
         <div class="collapse collapse-plus bg-base-200">
@@ -139,17 +157,20 @@
           </div>
           <div class="collapse-content text-sm">
             map(), forEach(), and filter() are used for arrays in JavaScript.
-             map() creates a new array, forEach() loops without returning, and filter() creates a new array with matching items.
+            map() creates a new array, forEach() loops without returning, and
+            filter() creates a new array with matching items.
           </div>
         </div>
         <div class="collapse collapse-plus bg-base-200">
           <input type="radio" name="my-accordion-3" />
           <div class="collapse-title font-semibold">
-            3. Explain arrow functions and how they are different from regular functions
+            3. Explain arrow functions and how they are different from regular
+            functions
           </div>
           <div class="collapse-content text-sm">
-            Arrow functions are a shorter way to write functions in JavaScript. They don’t have their own this, making them different from regular functions.
-             Use them for simple and cleaner code.
+            Arrow functions are a shorter way to write functions in JavaScript.
+            They don’t have their own this, making them different from regular
+            functions. Use them for simple and cleaner code.
           </div>
         </div>
         <div class="collapse collapse-plus bg-base-200">
@@ -158,8 +179,10 @@
             4. How JavaScript Promises work
           </div>
           <div class="collapse-content text-sm">
-            JavaScript Promises handle async tasks. A Promise has three states: pending, resolved, or rejected.
-             It runs a task and, when done, either resolves (success) or rejects (error). Use .then() and .catch().
+            JavaScript Promises handle async tasks. A Promise has three states:
+            pending, resolved, or rejected. It runs a task and, when done,
+            either resolves (success) or rejects (error). Use .then() and
+            .catch().
           </div>
         </div>
         <div class="collapse collapse-plus bg-base-200">
@@ -168,8 +191,10 @@
             5. How closures work in JavaScript
           </div>
           <div class="collapse-content text-sm">
-            Closures in JavaScript happen when a function remembers variables from its parent scope, even after the parent function has finished running.
-             This helps keep data private and makes functions more powerful.
+            Closures in JavaScript happen when a function remembers variables
+            from its parent scope, even after the parent function has finished
+            running. This helps keep data private and makes functions more
+            powerful.
           </div>
         </div>
       </main>
@@ -188,12 +213,12 @@
           <p>Providing ED-Tech Applications since 2025</p>
         </div>
         <div>
-            <p class="text-xs text-gray-500 font-semibold py-3">FOLLOW US</p>
-            <div class="flex gap-3">
-                <img class="" src="images/fb-thumb.png" alt="">
-                <img class="" src="images/youtube-thumb.png" alt="">
-                <img class="" src="images/instagram-thumb.png" alt="">
-            </div>
+          <p class="text-xs text-gray-500 font-semibold py-3">FOLLOW US</p>
+          <div class="flex gap-3">
+            <img class="" src="images/fb-thumb.png" alt="" />
+            <img class="" src="images/youtube-thumb.png" alt="" />
+            <img class="" src="images/instagram-thumb.png" alt="" />
+          </div>
         </div>
       </div>
     </footer>
