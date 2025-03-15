@@ -31,7 +31,7 @@
       .active {
         background: #422ad5;
         color: white;
-        border-radius: 5px;
+        /* border-radius: 5px; */
       }
     </style>
   </head>
@@ -120,13 +120,17 @@
       <h2 class="font-bold text-4xl text-center my-10">
         <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
       </h2>
-
       <div id="category-buttons" class="flex justify-center gap-6"></div>
       <div
         id="detailsContainer"
         class="bg-gray-50 rounded-lg my-5 text-center min-h-[220px] p-5"
       >
         <main>
+          <!-- loader -->
+          <section id="loader" class="text-center py-5 hidden">
+            <span class="loading loading-dots loading-xl"></span>
+          </section>
+
           <section id="details-container">
             <p class="text-xs pt-10">আপনি এখনো কোন Lesson Select করেন নি</p>
             <p class="font-medium text-4xl py-5">একটি Lesson Select করুন।</p>
@@ -135,7 +139,7 @@
       </div>
     </section>
 
-    <section id="details-container">
+    <section id="">
       <dialog id="lesson_details" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
           <p id="lesson-heading" class="py-2 font-semibold text-4xl"></p>
@@ -149,7 +153,7 @@
           <div class="modal-action flex justify-start">
             <form method="dialog">
               <button
-                class="btn bg-[#422AD5] text-white font-medium text-xl p-4 rounded-md hover:bg-white hover:border hover:border-[#422AD5] hover:text-[#422AD5]"
+                class="btn bg-[#422AD5] text-white text-lg p-4 rounded-xl hover:bg-white hover:border hover:border-[#422AD5] hover:text-[#422AD5]"
               >
                 Complete Learning
               </button>
