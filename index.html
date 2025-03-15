@@ -29,7 +29,9 @@
         font-style: normal;
       }
       .active {
-        background-color: #422ad5;
+        background: #422ad5;
+        color: white;
+        border-radius: 5px;
       }
     </style>
   </head>
@@ -126,11 +128,35 @@
       >
         <main>
           <section id="details-container">
-            <p class="text-xs pt-20">আপনি এখনো কোন Lesson Select করেন নি</p>
+            <p class="text-xs pt-10">আপনি এখনো কোন Lesson Select করেন নি</p>
             <p class="font-medium text-4xl py-5">একটি Lesson Select করুন।</p>
           </section>
         </main>
       </div>
+    </section>
+
+    <section id="details-container">
+      <dialog id="lesson_details" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <p id="lesson-heading" class="py-2 font-semibold text-4xl"></p>
+          <p class="py-4"></p>
+          <p id="lesson-p1" class="py-2 font-semibold text-2xl"></p>
+          <p id="lesson-p2" class="py-4 font-medium text-2xl"></p>
+          <p id="lesson-p3" class="py-4 font-semibold text-2xl"></p>
+          <p id="lesson-p4" class="py-4 text-2xl"></p>
+          <p id="lesson-p5" class="py-4 font-medium text-2xl"></p>
+          <div id="button-container"></div>
+          <div class="modal-action flex justify-start">
+            <form method="dialog">
+              <button
+                class="btn bg-[#422AD5] text-white font-medium text-xl p-4 rounded-md hover:bg-white hover:border hover:border-[#422AD5] hover:text-[#422AD5]"
+              >
+                Complete Learning
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </section>
 
     <!-- frequently ask section -->
