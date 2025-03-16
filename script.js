@@ -19,11 +19,13 @@ document.getElementById('getStarted').addEventListener(('click'), () => {
 
     if (username !== "") {
         if (convertedPassword === 123456) {
+
             document.getElementById('hero').classList.add('hidden');
             document.getElementById('nav').classList.remove('hidden');
             document.getElementById('learn-section').classList.remove('hidden');
             document.getElementById('modal').classList.remove('hidden');
             document.getElementById('faq-section').classList.remove('hidden');
+            alert('Login Successful');
         }
         else {
             alert('Incorrect password');
