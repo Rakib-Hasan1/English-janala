@@ -37,7 +37,7 @@
   </head>
   <body class="poppins">
     <!-- navbar section -->
-    <nav class="py-5 bg-gray-100 border-b-2 border-gray-300 sticky top-0 z-50">
+    <nav id="nav" class="py-5 bg-gray-100 border-b-2 border-gray-300 sticky top-0 z-50 hidden section">
       <div class="flex flex-col md:flex-row justify-between w-11/12 mx-auto">
         <div class="flex items-center">
           <p class="font-semibold text-xl">English</p>
@@ -57,7 +57,7 @@
           >
             <i class="fa-solid fa-book-open"></i> Learn
           </button>
-          <button
+          <button id="logout-btn"
             class="btn text-[#422AD5] border-[#422AD5] hover:bg-[#422AD5] hover:text-white"
           >
             <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
@@ -67,7 +67,7 @@
     </nav>
     <!-- hero section -->
 
-    <section>
+    <section id="hero">
       <div
         class="sm:flex items-center md:flex-row justify-between w-11/12 mx-auto"
       >
@@ -82,27 +82,12 @@
             <br />
             যাবে অন্য একটি Level এ
           </p>
-          <div class="py-3">
-            <input
-              class="my-2 pr-10 border-gray-300 rounded-sm"
-              placeholder="  Enter Your Name"
-              type="text"
-              required
-              name=""
-              id=""
-            />
+          <div class="py-10">
+            <input class="my-2 py-1 border-gray-400 rounded-sm" type="text" id="userName" placeholder="  Enter Your Name">
             <br />
-            <input
-              id="input-password"
-              class="my-2 pr-10 border-gray-300 rounded-sm"
-              placeholder="  ........"
-              type="password"
-              required
-              name=""
-              id=""
-            />
+            <input class="my-2 py-1 border-gray-400 rounded-sm" type="password" id="password" placeholder="  .......">
             <br />
-            <button
+            <button id="getStarted"
               class="btn my-2 bg-[#3D26C7] text-white hover:bg-gray-100 hover:text-black hover:border-[#3D26C7]"
             >
               Get Started
@@ -116,7 +101,7 @@
     </section>
 
     <!-- Learn section -->
-    <section id="learn-section" class="w-11/12 mx-auto">
+    <section id="learn-section" class="w-11/12 mx-auto hidden section">
       <h2 class="font-bold text-4xl text-center my-10">
         <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
       </h2>
@@ -139,7 +124,8 @@
       </div>
     </section>
 
-    <section id="">
+    <!-- modal section -->
+    <section id="modal" class="hidden section section">
       <dialog id="lesson_details" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
           <p id="lesson-heading" class="py-2 font-semibold text-4xl"></p>
@@ -164,7 +150,7 @@
     </section>
 
     <!-- frequently ask section -->
-    <section id="faq-section" class="w-11/12 mx-auto my-20 p-4">
+    <section id="faq-section" class="w-11/12 mx-auto my-20 p-4 hidden section">
       <h2 class="font-bold text-4xl text-center my-10">
         <span class="text-[#00BCFF]">Frequently</span> Asked Questions
       </h2>
@@ -231,7 +217,7 @@
     </section>
 
     <!-- footer section -->
-    <footer class="border-t-2 border-red-200">
+    <footer id="footer" class="border-t-2 border-red-200 mt-40">
       <div class="py-20 w-11/12 mx-auto flex items-center justify-between">
         <div>
           <div class="flex items-center w-[173px]">

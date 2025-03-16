@@ -1,3 +1,40 @@
+
+document.getElementById('logout-btn').addEventListener(('click'), () => {
+    document.getElementById('hero').style.display = 'block';
+    const sections = document.getElementsByClassName('section');
+    for (let section of sections) {
+        section.style.display = 'none'
+    };
+    document.getElementById('userName').value = '';
+    document.getElementById('password').value = '';
+    window.location.reload();
+});
+
+
+
+document.getElementById('getStarted').addEventListener(('click'), () => {
+    const username = document.getElementById('userName').value;
+    const password = document.getElementById('password').value;
+    const convertedPassword = parseInt(password);
+
+    if (username !== "") {
+        if (convertedPassword === 123456) {
+            document.getElementById('hero').classList.add('hidden');
+            document.getElementById('nav').classList.remove('hidden');
+            document.getElementById('learn-section').classList.remove('hidden');
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('faq-section').classList.remove('hidden');
+        }
+        else {
+            alert('Incorrect password');
+        }
+    }
+    else {
+        alert('Invalid Username');
+    };
+});
+
+
 function scrollToFAQ() {
     const section = document.getElementById('faq-section');
     window.scrollTo({
@@ -102,7 +139,7 @@ const showCategories = (lessons) => {
     const lessonContainer = document.getElementById('details-container');
     lessonContainer.innerHTML = ``;
 
-        if (lessons.length < 1) {
+    if (lessons.length < 1) {
         lessonContainer.classList.remove('grid', 'grid-cols-3');
         lessonContainer.innerHTML = `
         <div class="flex justify-center items-center h-[300px]">
@@ -130,15 +167,15 @@ const showCategories = (lessons) => {
         `
         lessonContainer.appendChild(div);
     });
-  hideLoader();
+    hideLoader();
 };
- 
+
 
 function pronounceWord(word) {
     const utterance = new SpeechSynthesisUtterance(word);
     utterance.lang = 'en-EN'; // Japanese
     window.speechSynthesis.speak(utterance);
-  };
+};
 
 
 loadButtons();
