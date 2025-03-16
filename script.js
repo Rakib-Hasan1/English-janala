@@ -125,7 +125,7 @@ const showCategories = (lessons) => {
                   </div>
                   <div class="flex justify-around mt-20">
                    <button onclick="lessonsDetails(${lesson.id})" class="btn"><i class="fa-solid fa-circle-info"></i></button>
-                    <button class="btn"><i class="fa-solid fa-volume-high"></i></button>
+                    <button onclick="pronounceWord('${lesson.word}')" class="btn"><i class="fa-solid fa-volume-high"></i></button>
                   </div>
         `
         lessonContainer.appendChild(div);
@@ -133,4 +133,12 @@ const showCategories = (lessons) => {
   hideLoader();
 };
  
+
+function pronounceWord(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-EN'; // Japanese
+    window.speechSynthesis.speak(utterance);
+  };
+
+
 loadButtons();
